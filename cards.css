@@ -1,0 +1,106 @@
+/* ANSHUL GAUTAM
+   IIIT-D
+*/
+
+body {
+	background-image: url("check.svg");
+}
+
+footer {
+	font-family: 'Dekko';font-size: 22px;
+	color: maroon;
+}
+
+.container {
+	position: relative;
+}
+
+#one {
+	z-index: 1000;
+	position: absolute;
+	display: block;
+	left: 420px;
+	top: 260px;
+	filter: drop-shadow(5px 10px 4px grey);
+}
+
+#two {
+	z-index: 998;
+	position: absolute;
+	display: block;
+	left: 460px;
+	top: 240px;
+	filter: drop-shadow(5px 10px 4px grey);
+}
+
+#three {
+	z-index: 996;
+	position: absolute;
+	left: 500px;
+	display: block;
+	top: 220px;
+	filter: drop-shadow(5px 10px 4px grey);
+}
+
+#four {
+	z-index: 994;
+	position: absolute;
+	left: 540px;
+	display: block;
+	top: 200px;
+	filter: drop-shadow(5px 10px 4px grey);
+}
+
+#two:hover {
+	position: absolute;
+	z-index: 1001;
+	display: block;
+	cursor: pointer;
+	left: 420px;
+	top: 260px;
+}
+
+#two:hover + #one {
+	transition: 5s;
+	/*display: block;*/
+	position: absolute;
+	left: 460px;
+	z-index: 999;
+	top: 240px;
+}
+
+#three:hover {
+	position: absolute;
+	z-index: 1002;
+	display: block;
+	cursor: pointer;
+	left: 420px;
+	top: 260px;
+}
+
+#three:hover ~ #one {
+	z-index: 996;
+	transition: 5s;
+	display: block;
+	position: absolute;
+	left: 500px;
+	top: 220px;
+}
+
+#four:hover {
+	position: absolute;
+	z-index: 1002;
+	display: block;
+	cursor: pointer;
+	left: 420px;
+	top: 260px;
+}
+
+#four:hover ~ #one {
+	z-index: 1;
+	transition: 5s;
+	display: block;
+	position: absolute;
+	left: 540px;
+	top: 200px;
+}
